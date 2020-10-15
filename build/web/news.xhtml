@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:body id="body">
+        <ui:composition template="template/navbar.xhtml">
+            <ui:define name="body">
+                <div class="ct-750 about-content pt_30">
+                    <div class="main__wrapper page--news" id="content">
+
+                        <div class="row row_gutter--banner-news">
+
+                            <div class="col m7 col_gutter--banner-news">
+
+                                <div class="banner-news__square h600">
+                                    <a href="https://www.tribunnews.com/nasional/2020/10/15/beredar-surat-demo-buruh-lanjutan-selama-5-hari-ksbsi-itu-instruksi-untuk-seluruh-indonesia" class="banner-news__item banner-news__item_h600 mainbanner" style="background-image: url(&quot;https://cdn-2.tstatic.net/tribunnews/foto/bank/images/demo-buruh-menolak-omnibus-law_20201012_172059.jpg&quot;);">
+
+                                        <div class="banner-news__caption">
+
+                                            <h4 class="barlow size_16 ls_0 lh_19 mb_5 c-primary uppercase">HUKUM<span class="news-circle" /><span class="c-white">Oct 15, 2020</span></h4>
+
+                                            <h2 class="barlow semibold size_36 ls_0 lh_43 c-white uppercase">Beredar Surat Demo Buruh Lanjutan Selama 5 Hari, KSBSI: Itu Instruksi untuk Seluruh Indonesia</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col m5 col_gutter--banner-news">
+
+                                <div class="mb_5 banner-news__square h298">
+                                    <a href="https://www.cnnindonesia.com/ekonomi/20201015155150-92-558840/ihsg-ambles-ke-5105-pada-hari-ini-15-oktober" class="banner-news__item banner-news__item_h298 mainbanner" style="background-image: url(&quot;https://akcdn.detik.net.id/visual/2020/05/20/0bd8a6ba-4c3c-4b96-aca3-2438e736d296_169.jpeg?w=650&quot;);">
+
+                                        <div class="banner-news__caption">
+
+                                            <h4 class="barlow size_16 ls_0 lh_19 mb_4 c-primary uppercase">EKONOMI<span class="news-circle" /><span class="c-white">Oct 15, 2020</span></h4>
+
+                                            <h2 class="barlow semibold size_24 ls_0 lh_29 c-white uppercase">IHSG Ambles ke 5.105 pada Hari Ini, 15 Oktober</h2>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="banner-news__square h298">
+                                    <a href="https://teamrrq.com/news/sempat-krisis-rrq-hoshi-tutup-regular-season-dengan-manis" class="banner-news__item banner-news__item_h298 mainbanner" style="background-image: url(&quot;https://akcdn.detik.net.id/community/media/visual/2020/10/04/1278434953_169.jpeg?w=700&quot;);">
+
+                                        <div class="banner-news__caption">
+
+                                            <h4 class="barlow size_16 ls_0 lh_19 mb_4 c-primary uppercase">OLAHRAGA<span class="news-circle" /><span class="c-white">Oct 15, 2020</span></h4>
+
+                                            <h2 class="barlow semibold size_24 ls_0 lh_29 c-white uppercase">Kemenangan 6-1 atas MU Bikin Tottenham Makin Pede</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ct pl_50 pr_50 pt_29 pb_50">
+
+                        <div class="ct-1180">
+                            <h2 class="rubick medium size_36 ls_0 lh_43 mb_15">News</h2>
+
+                            <div class="ct-news mb_8">
+                                <div class="nav-tabs-wrapper tab-scrolling">
+                                    <nav class="nav-tabs" id="pnProductNav" data-child="12">
+                                        <ul class="tabs-material barlow medium size_18 ls_0 lh_22 uppercase" id="pnProductNavContents">
+                                            <li class="tabs-material__list">
+                                                <a :href="'#'+category.slug" data-role="tabs-material">HUKUM</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tabs-material-line"></div>
+                                    </nav>
+                                    <a href="javascript:void(0);" class="tab-btn-prev hide" id="pnAdvancerLeft"></a>
+                                    <a href="javascript:void(0);" class="tab-btn-next" id="pnAdvancerRight"></a>
+                                </div>
+                            </div>
+
+                            <div class="tabs-material-content">
+
+                                <div class="tabs-material-item newsfeed" v-for="feed in feeds">
+                                    <div class="row row_gutter--square-news">
+                                        <div class="col m4 s6 col_gutter--news-square" v-for="news in feed.data">
+                                            <div class="news-square mb_20">
+                                                <div class="img-cover img-cover-news mb_12" :style="'background-image: url('')'"></div>
+
+                                                <div class="news-square__toolbar mb_6">
+                                                    <span class="news-square__category c-primary barlow size_14 ls_0 lh_17 uppercase" v-if="feed.division != 'latest'">
+                                                        {{ feed.division_name }}
+                                                    </span>
+
+                                                    <span class="news-square__category c-primary barlow size_14 ls_0 lh_17 uppercase">
+                                                        {{ news.division_name }}
+                                                    </span>
+
+                                                    <span class="news-square__datetime to-right">{{ news.created_at }}</span>
+                                                </div>
+
+                                                <a :href="news.url" class="news-square__title barlow semibold size_24 ls_0 lh_29">{{ news.title }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col m12 text-center">
+                                            <button type="button" class="btn size_18 ls_0 lh_22 barlow semibold btn_w170"><span class="alpha_08">SEE MORE</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
