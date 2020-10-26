@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:body id="body">
+        <ui:composition template="template/navbar2.xhtml">
+            <ui:define name="body">
+                <div class="main__wrapper page--contact pt_50 pb_40 xs-pt_30 xs-pb_30" style="background-image: url(https://w.wallhaven.cc/full/g8/wallhaven-g8lkkl.jpg); background-size: 130%; background-position-y: 1500px; background-position-x: 10px">
+
+                    <div class="ct-730">
+                        <h2 class="borlaw semibold size_36 ls_0 lh_43 mb_53 hidden-xs">Admin Login</h2>
+                        <h:form>
+
+                            <div class="row row_gutter15">
+
+                                <div class="col m6 xs12 col_gutter15 field_input">
+
+                                    <div class="form-group mb_31 xs-mb_15" id="input_username">
+                                        <label class="barlow medium size_18 xs-size_14 ls_0 xs-lh_17 lh_22 xs-mb_5 mb_6">Username</label>
+                                        <h:inputText class="form-control rubick" value="#{admin.username}"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row_gutter15">
+
+                                <div class="col m6 xs12 col_gutter15 field_input">
+
+                                    <div class="form-group mb_31 xs-mb_15" id="input_password">
+                                        <label class="barlow medium size_18 xs-size_14 ls_0 xs-lh_17 lh_22 xs-mb_5 mb_6">Password</label>
+                                        <h:inputSecret class="form-control rubick" value="#{admin.password}"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <br></br>
+
+                            <div class="row row_gutter15 mb_50 xs-mb_30">
+
+                                <div class="col m12 col_gutter15">
+                                    <h:commandButton id="registration" class="btn xs-size_16 size_24 ls_0 lh_29 xs-lh_19 barlow bold btn_w200" value="Login" action="#{admin.validatelogin()}"></h:commandButton>
+                                </div>
+                            </div>
+
+                        </h:form>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

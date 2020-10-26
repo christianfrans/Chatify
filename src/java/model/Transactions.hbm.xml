@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 24, 2020 11:56:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Transactions" table="transactions" catalog="chatifyhibernate" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="stickers" class="model.Stickers" fetch="select">
+            <column name="stickers_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="model.Users" fetch="select">
+            <column name="users_id" not-null="true" />
+        </many-to-one>
+        <property name="totalprice" type="int">
+            <column name="totalprice" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

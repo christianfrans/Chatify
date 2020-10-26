@@ -5,7 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:body id="body">
-        <ui:composition template="template/navbar.xhtml">
+        <ui:composition template="template/navbarUsers.xhtml">
             <ui:define name="body">
                 <div class="ct-750 about-content pt_30">
                     <div class="main__wrapper page--news" id="content">
@@ -66,44 +66,96 @@
                                     <nav class="nav-tabs" id="pnProductNav" data-child="12">
                                         <ul class="tabs-material barlow medium size_18 ls_0 lh_22 uppercase" id="pnProductNavContents">
                                             <li class="tabs-material__list">
-                                                <a :href="'#'+category.slug" data-role="tabs-material">HUKUM</a>
+                                                <a :href="'#'+category.slug" data-role="tabs-material">HOT TOPIC</a>
                                             </li>
                                         </ul>
                                         <div class="tabs-material-line"></div>
                                     </nav>
-                                    <a href="javascript:void(0);" class="tab-btn-prev hide" id="pnAdvancerLeft"></a>
-                                    <a href="javascript:void(0);" class="tab-btn-next" id="pnAdvancerRight"></a>
                                 </div>
                             </div>
 
                             <div class="tabs-material-content">
+                                <div class="mdk-tag-contg mdk-tag-contg-norm" rel="1235375" style="margin: 0px; padding: 25px 5px;">
 
-                                <div class="tabs-material-item newsfeed" v-for="feed in feeds">
-                                    <div class="row row_gutter--square-news">
-                                        <div class="col m4 s6 col_gutter--news-square" v-for="news in feed.data">
-                                            <div class="news-square mb_20">
-                                                <div class="img-cover img-cover-news mb_12" :style="'background-image: url('')'"></div>
+                                    <div class="mdk-tag-contln">
 
-                                                <div class="news-square__toolbar mb_6">
-                                                    <span class="news-square__category c-primary barlow size_14 ls_0 lh_17 uppercase" v-if="feed.division != 'latest'">
-                                                        {{ feed.division_name }}
-                                                    </span>
+                                        <div class="mdk-tag-contln-l">
+                                            <a title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html"><img width="140" title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" src="https://cdns.klimg.com/merdeka.com/i/w/news/2020/10/26/1235375/140x70/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.jpg" alt="" /></a>
+                                        </div>
 
-                                                    <span class="news-square__category c-primary barlow size_14 ls_0 lh_17 uppercase">
-                                                        {{ news.division_name }}
-                                                    </span>
+                                        <div class="mdk-tag-contln-r2" style="width: 490px;">
 
-                                                    <span class="news-square__datetime to-right">{{ news.created_at }}</span>
-                                                </div>
+                                            <div class="mdk-tag-contln-date"><span style="color: rgb(102, 102, 102);">JATIM</span> &nbsp; Sekitar 4 menit yang lalu</div>
 
-                                                <a :href="news.url" class="news-square__title barlow semibold size_24 ls_0 lh_29">{{ news.title }}</a>
+                                            <div class="mdk-tag-contln-titlebar">
+                                                <a target="_blank" class="mdk-tag-contln-title" style="font-family: arial;" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami</a>
+                                                <a target="_blank" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">
+                                                    <img title="Open in New Window" src="https://cdns.klimg.com/merdeka.com/media/i/a/new_window.gif" alt="" />
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="mdk-tag-contg mdk-tag-contg-norm" rel="1235375" style="margin: 0px; padding: 25px 5px;">
 
-                                    <div class="row">
-                                        <div class="col m12 text-center">
-                                            <button type="button" class="btn size_18 ls_0 lh_22 barlow semibold btn_w170"><span class="alpha_08">SEE MORE</span></button>
+                                    <div class="mdk-tag-contln">
+
+                                        <div class="mdk-tag-contln-l">
+                                            <a title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html"><img width="140" title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" src="https://cdns.klimg.com/merdeka.com/i/w/news/2020/10/26/1235416/140x70/wapres-sebut-banyak-orang-terjebak-mental-pencitraan.jpg" alt="" /></a>
+                                        </div>
+
+                                        <div class="mdk-tag-contln-r2" style="width: 490px;">
+
+                                            <div class="mdk-tag-contln-date"><span style="color: rgb(102, 102, 102);">PERISTIWA</span> &nbsp; Sekitar 4 menit yang lalu</div>
+
+                                            <div class="mdk-tag-contln-titlebar">
+                                                <a target="_blank" class="mdk-tag-contln-title" style="font-family: arial;" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">Wapres Sebut Banyak Orang Terjebak Mental Pencitraan</a>
+                                                <a target="_blank" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">
+                                                    <img title="Open in New Window" src="https://cdns.klimg.com/merdeka.com/media/i/a/new_window.gif" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdk-tag-contg mdk-tag-contg-norm" rel="1235375" style="margin: 0px; padding: 25px 5px;">
+
+                                    <div class="mdk-tag-contln">
+
+                                        <div class="mdk-tag-contln-l">
+                                            <a title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html"><img width="140" title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" src="https://cdns.klimg.com/merdeka.com/i/w/news/2020/10/26/1235414/140x70/pasien-sembuh-covid-19-di-kabupaten-sukabumi-alami-kenaikan.jpg" alt="" /></a>
+                                        </div>
+
+                                        <div class="mdk-tag-contln-r2" style="width: 490px;">
+
+                                            <div class="mdk-tag-contln-date"><span style="color: rgb(102, 102, 102);">JATIM</span> &nbsp; Sekitar 4 menit yang lalu</div>
+
+                                            <div class="mdk-tag-contln-titlebar">
+                                                <a target="_blank" class="mdk-tag-contln-title" style="font-family: arial;" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">Pasien Sembuh Covid-19 di Kabupaten Sukabumi Alami Kenaikan</a>
+                                                <a target="_blank" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">
+                                                    <img title="Open in New Window" src="https://cdns.klimg.com/merdeka.com/media/i/a/new_window.gif" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdk-tag-contg mdk-tag-contg-norm" rel="1235375" style="margin: 0px; padding: 25px 5px;">
+
+                                    <div class="mdk-tag-contln">
+
+                                        <div class="mdk-tag-contln-l">
+                                            <a title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html"><img width="140" title="Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami" src="https://cdns.klimg.com/merdeka.com/i/w/news/2020/10/26/1235411/140x70/sri-mulyani-ingin-anak-buahnya-bagikan-ilmu-pengelolaan-keuangan-negara-lewat-buku.jpg" alt="" /></a>
+                                        </div>
+
+                                        <div class="mdk-tag-contln-r2" style="width: 490px;">
+
+                                            <div class="mdk-tag-contln-date"><span style="color: rgb(102, 102, 102);">EKONOMI</span> &nbsp;</div>
+
+                                            <div class="mdk-tag-contln-titlebar">
+                                                <a target="_blank" class="mdk-tag-contln-title" style="font-family: arial;" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">Kerap Bermain di FTV Pintu Berkah, Ini 4 Potret Nahza Soebijakto dan Suami</a>
+                                                <a target="_blank" href="/jatim/kerap-bermain-di-ftv-pintu-berkah-ini-4-potret-nahza-soebijakto-dan-suami.html">
+                                                    <img title="Open in New Window" src="https://cdns.klimg.com/merdeka.com/media/i/a/new_window.gif" alt="" />
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

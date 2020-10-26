@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 24, 2020 11:56:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Users" table="users" catalog="chatifyhibernate" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="first_name" length="20" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="20" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="200" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="200" not-null="true" />
+        </property>
+        <set name="transactionses" table="transactions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="users_id" not-null="true" />
+            </key>
+            <one-to-many class="model.Transactions" />
+        </set>
+    </class>
+</hibernate-mapping>

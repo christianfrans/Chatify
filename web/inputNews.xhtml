@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:body id="body">
+        <ui:composition template="template/navbarNews.xhtml">
+            <ui:define name="body">
+                <div class="main__wrapper page--contact pt_50 pb_40 xs-pt_30 xs-pb_30">
+
+                    <div class="ct-730">
+
+                        <h2 class="borlaw semibold size_36 ls_0 lh_43 mb_53 hidden-xs">Input New News</h2>
+                        <h:form>
+                            <div class="row row_gutter15">
+                                <div class="col m6 xs12 col_gutter15 field_input">
+                                    <div class="form-group mb_31 xs-mb_15" id="input_adminID">
+                                        <label class="barlow medium size_18 xs-size_14 ls_0 xs-lh_17 lh_22 xs-mb_5 mb_6">Admin Name</label>
+                                        <h:selectOneMenu value="#{news.admin}" class="dropdown">
+                                            <f:selectItems value="#{news.allAdmin}" class="dropdown--item"/>
+                                        </h:selectOneMenu>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row_gutter15">
+                                <div class="col m6 xs12 col_gutter15 field_input" style="left: 200px;">
+                                    <div class="form-group mb_31 xs-mb_15" id="input_title">
+                                        <label class="barlow medium size_18 xs-size_14 ls_0 xs-lh_17 lh_22 xs-mb_5 mb_6">News Title</label>
+                                        <h:inputText class="form-control rubick" value="#{news.title}"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row_gutter15">
+
+                                <div class="col m6 xs12 col_gutter15 field_input">
+
+                                    <div class="form-group mb_31 xs-mb_15" id="input_url">
+                                        <label class="barlow medium size_18 xs-size_14 ls_0 xs-lh_17 lh_22 xs-mb_5 mb_6">Picture URL</label>
+                                        <h:inputText class="form-control rubick" value="#{news.url}"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <br></br>
+                            <br></br>
+                            <div class="row row_gutter15 mb_50 xs-mb_30">
+
+                                <div class="col m12 col_gutter15">
+                                    <h:commandButton id="inputNews" class="btn xs-size_16 size_24 ls_0 lh_29 xs-lh_19 barlow bold btn_w200" value="Input" action="#{news.save()}"/>
+                                </div>
+                            </div>
+
+                        </h:form>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
